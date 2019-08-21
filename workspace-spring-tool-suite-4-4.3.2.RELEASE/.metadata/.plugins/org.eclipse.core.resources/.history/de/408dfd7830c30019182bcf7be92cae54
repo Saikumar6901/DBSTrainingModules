@@ -1,0 +1,15 @@
+package com.example.service;
+
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.demo.Employee;
+
+public class EmployeeService {
+
+	public Employee createEmployee(@RequestParam int empid,@RequestParam String name) {
+		Employee e=new Employee();
+		e.setEmpid(empid);
+		e.setName(name);
+		return r;
+	}
+}

@@ -1,0 +1,10 @@
+package com.sj.passwordencrypt;
+
+public class PasswordEncryption {
+	public static void main(String[] args) {
+		String[] origPassword= {"arun123","Kmit123$"};
+		PasswordEncoder encoder=new BCryptPasswordEncoder();
+		
+		
+	}
+}

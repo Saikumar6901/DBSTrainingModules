@@ -1,0 +1,12 @@
+package com.sj.rest.demo;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+public interface BookDBDao extends JpaRepository<Book, Integer>{
+	@Query("from Book where price>?1")
+	public List<Book>  selectBookByPrice(int price);
+
+}

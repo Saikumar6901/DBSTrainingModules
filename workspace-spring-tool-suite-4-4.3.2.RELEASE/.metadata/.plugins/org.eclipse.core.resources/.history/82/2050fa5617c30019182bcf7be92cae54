@@ -1,0 +1,7 @@
+package com.sj.aspects;
+
+import org.springframework.aop.ThrowsAdvice;
+
+public class MyThrowsExceptionAdvice implements ThrowsAdvice {
+	
+}

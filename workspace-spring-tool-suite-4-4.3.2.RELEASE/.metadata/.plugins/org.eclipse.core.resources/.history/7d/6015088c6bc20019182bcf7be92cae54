@@ -1,0 +1,28 @@
+package com.sj.rest.demo;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+
+@Entity
+public class Empshort {
+	@Id
+	int empno;
+	String ename;
+	String job;
+	int sal;
+	@JoinColumn
+	int deptno;
+	public Empshort() {}
+	
+	public Empshort(int empno, String ename, String job, int sal, int deptno) {
+		super();
+		this.empno = empno;
+		this.ename = ename;
+		this.job = job;
+		this.sal = sal;
+		this.deptno = deptno;
+	}
+	
+	
+}

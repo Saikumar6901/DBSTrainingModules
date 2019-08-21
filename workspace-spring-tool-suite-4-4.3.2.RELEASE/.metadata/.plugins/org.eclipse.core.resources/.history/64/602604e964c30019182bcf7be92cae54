@@ -1,0 +1,14 @@
+package com.sj.paddencrypt;
+
+import com.sj.passwordencrypt.BCryptPasswordEncoder;
+import com.sj.passwordencrypt.PasswordEncoder;
+
+public class PasswordEncrypt {
+		public static void main(String[] args) {
+			String[] origPassword= {"arun123","Kmit123$"};
+			PasswordEncoder encoder=new BCryptPasswordEncoder();
+			
+			
+	}
+
+}

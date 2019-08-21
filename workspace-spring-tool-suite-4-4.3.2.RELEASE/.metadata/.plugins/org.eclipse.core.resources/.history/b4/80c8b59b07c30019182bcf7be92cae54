@@ -1,0 +1,5 @@
+package com.sj.aspects;
+
+public class MyMethodBeforeAdvice {
+
+}

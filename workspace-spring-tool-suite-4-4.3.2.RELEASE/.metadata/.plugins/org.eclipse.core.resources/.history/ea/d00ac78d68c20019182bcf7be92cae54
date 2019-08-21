@@ -1,0 +1,5 @@
+package com.sj.rest.demo;
+
+public interface EmpDBDao {
+
+}

@@ -1,0 +1,8 @@
+package com.sj.rest.demo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BookDBDao extends JpaRepository<Book, Integer>{
+	
+
+}

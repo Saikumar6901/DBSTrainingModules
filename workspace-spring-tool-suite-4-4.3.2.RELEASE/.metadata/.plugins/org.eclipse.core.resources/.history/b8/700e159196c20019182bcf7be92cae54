@@ -1,0 +1,18 @@
+package com.example.demo.container;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.CarDBDemo;
+
+@RestController
+public class MyRestContainer {
+	@Autowired
+	CarDBDemo dao;
+	
+	@RequestMapping("/cars")
+	public String hi() {
+		return "hi";
+	}
+}

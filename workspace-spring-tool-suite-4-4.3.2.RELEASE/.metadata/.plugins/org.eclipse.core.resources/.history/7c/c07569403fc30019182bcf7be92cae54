@@ -1,0 +1,5 @@
+package com.sj.paddencrypt;
+
+public class PasswordEncrypt {
+
+}

@@ -1,0 +1,25 @@
+package com.example.demo;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class mycontroller {
+	@RequestMapping("/")
+	public String login() {
+		return "login.jsp";
+	}
+	@RequestMapping("/verify")
+	public String greet(HttpServletRequest request) {
+		String uname = request.getParameter("uname");
+		String pwd = request.getParameter("pwd");
+		HttpSession session=request.getSession();
+		session.setAttribute("username", uname);
+		session.setAttribute("password", pwd);
+		return "welcome.jsp";
+	}
+}

@@ -1,0 +1,36 @@
+package com.sj.rest.demo;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class emp {
+	@Id
+	int empno;
+	String ename;
+	String job;
+	int age;
+	int mgr;
+	Date hiredate;
+	int sal;
+	int comm;
+	int deptno;
+	public emp() {
+		
+	}
+	public emp(int empno, String ename, String job, int age, int mgr, Date hiredate, int sal, int comm, int deptno) {
+		super();
+		this.empno = empno;
+		this.ename = ename;
+		this.job = job;
+		this.age = age;
+		this.mgr = mgr;
+		this.hiredate = hiredate;
+		this.sal = sal;
+		this.comm = comm;
+		this.deptno = deptno;
+	}
+	
+}

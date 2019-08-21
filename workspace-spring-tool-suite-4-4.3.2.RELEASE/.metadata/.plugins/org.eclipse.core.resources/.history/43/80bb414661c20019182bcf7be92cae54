@@ -1,0 +1,29 @@
+package com.sj.rest.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/web")
+public class Myrestcontroller {
+
+	@Autowired
+	BookDBDao dao;
+	
+	@RequestMapping("/hi")
+	public String hi() {
+	 return "hi";
+	}
+	
+	@PostMapping("/insert")
+	public String insertBook(@RequestBody Book b) {
+		if(dao.existsById(b.bookid))
+		return "Record already exists";
+		dao.save(b);
+		return "Success";
+	}
+}

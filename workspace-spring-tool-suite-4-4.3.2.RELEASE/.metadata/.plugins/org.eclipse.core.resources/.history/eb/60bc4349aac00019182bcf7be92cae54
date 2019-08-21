@@ -1,0 +1,28 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class Mycontroller {
+	@Autowired
+	EmpDBDao dao;
+	
+	@RequestMapping("/")
+	public String welcome() {
+		return "Viewall.jsp";
+	}
+	@RequestMapping("/displayAll")
+	@ResponseBody
+	public String displayAll() {
+		return dao.findAll().toString();
+	}
+
+	@RequestMapping("/displayByID")
+	@ResponseBody
+	public String displayEmpById(int eid) {
+	return dao.findById(eid).toString();
+	}
+}

@@ -1,0 +1,11 @@
+package com.sj.rest.demo;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Myrestcontroller {
+
+	public String hi() {
+	 return "hi";
+	}
+}

@@ -1,0 +1,61 @@
+package com.sj.rest.demo;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/Books")
+public class Myrestcontroller {
+	@Autowired
+	BookDBDao dao;
+	
+	@RequestMapping("/hi")
+	public String hi() {
+	 return "hi";
+	}
+	
+	@PostMapping("/insert")
+	public String insertBook(@RequestBody Book b) {
+		if(dao.existsById(b.bookid))
+		return "Record already exists";
+		dao.save(b);
+		return "Success";
+	}
+	
+	@GetMapping("/selectAll")
+	public List<Book> selectBook() {
+		return dao.findAll();
+	}
+	
+	@GetMapping("/selectByPrice/{price}")
+	public List<Book> selectBook(@PathVariable int price) {
+		return dao.findAll();
+	}
+	
+	@PutMapping("/update")
+	public String updateBook(@RequestBody Book b) {
+		if(dao.existsById(b.bookid)) {
+			dao.save(b);
+		return "Success";
+	}
+		return "no record named with bookid: "+b.bookid;
+	}
+
+	@DeleteMapping("/delete/{bookid}")
+	public String deleteBook(@PathVariable int bookid) {
+		if(dao.existsById(bookid)) {
+			dao.deleteById(bookid);
+		   return "Delete Successfully";
+		}
+		return "no record named with bookid: "+bookid;
+	}
+}
