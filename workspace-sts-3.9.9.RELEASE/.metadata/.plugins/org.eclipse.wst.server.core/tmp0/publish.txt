@@ -1,0 +1,6 @@
+#Tomcat publish data
+#Thu Aug 15 13:44:15 IST 2019
+org.eclipse.jst.jee.server\:HelloworldDispatcher=C\:\\Users\\Abridge Solutions\\Downloads\\spring-tool-suite\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\HelloworldDispatcher
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Abridge\ Solutions\\Documents\\workspace-sts-3.9.9.RELEASE\\Springmvc\\WebContent\\WEB-INF\\lib\\spring-web-4.3.25.RELEASE.jar=C\:\\Users\\Abridge Solutions\\Downloads\\spring-tool-suite\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\Springmvc\\WEB-INF\\lib\\spring-web-4.3.25.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Abridge\ Solutions\\Documents\\workspace-sts-3.9.9.RELEASE\\HelloworldDispatcher\\WebContent\\WEB-INF\\lib\\spring-web-4.3.25.RELEASE.jar=C\:\\Users\\Abridge Solutions\\Downloads\\spring-tool-suite\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\HelloworldDispatcher\\WEB-INF\\lib\\spring-web-4.3.25.RELEASE.jar
+org.eclipse.jst.jee.server\:Springmvc=C\:\\Users\\Abridge Solutions\\Downloads\\spring-tool-suite\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\Springmvc

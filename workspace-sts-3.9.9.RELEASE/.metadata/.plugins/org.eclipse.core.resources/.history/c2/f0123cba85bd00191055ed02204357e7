@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="employee" class="com.emp.Emp" autowire="byName">
+		<property name="name" value="Saikumar"></property>
+		<property name="id" value="1"></property>
+	</bean>
+	<bean id="purchase" class="com.dept.Salesdept">
+		<property name="deptname" value="IBGT"></property>
+	</bean>
+	<bean id="sales" class="com.dept.Purchasedept">
+		<property name="deptname" value="ITT"></property>
+	</bean>
+</beans>

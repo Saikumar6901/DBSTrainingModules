@@ -1,0 +1,17 @@
+package com.sj.testcases;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.sj.I18N.International;
+
+public class LocalTestcase {
+
+	public LocalTestcase() {
+		// TODO Auto-generated constructor stub
+	}
+	public static void main(String[] args) {
+		AbstractApplicationContext ap=new ClassPathXmlApplicationContext("i18nbeans.xml");
+		International in=(International)ap.getBean("localisation");
+	}
+}

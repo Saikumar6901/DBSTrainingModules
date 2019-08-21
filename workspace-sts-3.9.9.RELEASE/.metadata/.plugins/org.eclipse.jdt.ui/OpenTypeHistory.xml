@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=Helloworld/src&lt;com.helloworld{Helloworld.java[Helloworld" modifiers="1" timestamp="1565669515335"/>
+<typeInfo handle="=Helloworld/src&lt;com.helloworld{Helloconstrc.java[Helloconstrc" modifiers="1" timestamp="1565603851683"/>
+<typeInfo handle="=calculator/src&lt;com.calculator{CalcA.java[CalcA" modifiers="1" timestamp="1565609963818"/>
+<typeInfo handle="=calculator/src&lt;com.calculator{CalcB.java[CalcB" modifiers="1" timestamp="1565609939169"/>
+<typeInfo handle="=calculator/src&lt;com.user{User.java[User" modifiers="1" timestamp="1565610019630"/>
+<typeInfo handle="=Department/src&lt;com.dept{Salesdept.java[Salesdept" modifiers="1" timestamp="1565671258184"/>
+<typeInfo handle="=Department/src&lt;com.dept{Purchasedept.java[Purchasedept" modifiers="1" timestamp="1565670701265"/>
+<typeInfo handle="=Department/src&lt;com.emp{Emp.java[Emp" modifiers="1" timestamp="1565674771248"/>
+<typeInfo handle="=LifecycleAssignment/src&lt;com.lifecycle{Lifecycle.java[Lifecycle" modifiers="1" timestamp="1565683491999"/>
+<typeInfo handle="=Carproject/src&lt;com.sj.sedan{Sedan.java[Sedan" modifiers="1" timestamp="1565688636942"/>
+<typeInfo handle="=Carproject/src&lt;com.sj.car{Car.java[Car" modifiers="1" timestamp="1565688604670"/>
+<typeInfo handle="=Currencyconverter/src&lt;com.sj.currency{Visitor.java[Visitor" modifiers="1" timestamp="1565694304687"/>
+<typeInfo handle="=Currencyconverter/src&lt;com.sj.currency{eurosToRupees.java[eurosToRupees" modifiers="1" timestamp="1565693870705"/>
+<typeInfo handle="=Currencyconverter/src&lt;com.sj.currency{dollarstoRupees.java[dollarstoRupees" modifiers="1" timestamp="1565693894281"/>
+<typeInfo handle="=internationlisation/src&lt;com.sj.I18N{International.java[International" modifiers="1" timestamp="1565761155375"/>
+<typeInfo handle="=1mvcHelloMVC/C:\/Users\/Abridge Solutions\/Downloads\/1mvcHelloMVC\/1mvcHelloMVC\/WebContent\/WEB-INF\/lib\/org.springframework.web.servlet-3.0.0.RELEASE.jar&lt;org.springframework.web.servlet.mvc.support(ControllerClassNameHandlerMapping.class[ControllerClassNameHandlerMapping" modifiers="33" timestamp="1565771606462"/>
+<typeInfo handle="=Springmvc/C:\/Users\/Abridge Solutions\/Downloads\/spring-webmvc-4.3.25.RELEASE.jar&lt;org.springframework.web.servlet.view(InternalResourceViewResolver.class[InternalResourceViewResolver" modifiers="33" timestamp="1565763920412"/>
+</typeInfoHistroy>

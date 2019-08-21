@@ -1,0 +1,30 @@
+package com.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+//@Controller
+//@RequestMapping(value="/hi")
+public class Helloworld {
+	//@RequestMapping(value="/hello", method=RequestMethod.GET)
+//	public String hi(Model model) {
+//		System.out.println("hi");
+//		model.addAttribute("message","sai");
+//	return "success";	
+//	}
+	public Helloworld() {
+		System.out.println("jhiphioqwehfo");
+	}
+	protected ModelAndView handleRequestInternal(HttpServletRequest arg0, HttpServletResponse arg1) throws Exception {
+        ModelAndView mv=new ModelAndView();
+        mv.setViewName("success");
+        mv.addObject("message","Hello World Spring MVC");
+        return mv;
+    }
+}

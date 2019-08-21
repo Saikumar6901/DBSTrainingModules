@@ -1,0 +1,28 @@
+package com.sj.currency;
+
+public class Visitor {
+String name;
+CurrencyConverter currency;
+public Visitor() {
+	// TODO Auto-generated constructor stub
+}
+public Visitor(String name,CurrencyConverter currency) {
+	super();
+	this.name = name;
+	this.currency=currency;
+}
+	public CurrencyConverter getCurrency() {
+	return currency;
+}
+public void setCurrency(CurrencyConverter currency) {
+	this.currency = currency;
+}
+
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.calculator;
+
+public interface Calc {
+public int add(int x,int y);
+}

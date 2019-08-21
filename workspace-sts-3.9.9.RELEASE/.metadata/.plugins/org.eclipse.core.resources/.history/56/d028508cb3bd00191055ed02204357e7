@@ -1,0 +1,9 @@
+package com.sj.currency;
+
+public class Visitor {
+
+	public Visitor() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

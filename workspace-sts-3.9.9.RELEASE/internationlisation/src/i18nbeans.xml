@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	
+	<bean id="localisation" class="com.sj.I18N.International">
+		<property name="language" value="en"></property>
+		<property name="country" value="GB"></property>
+		<property name="amount" value="123456.678"></property>
+	</bean>
+</beans>

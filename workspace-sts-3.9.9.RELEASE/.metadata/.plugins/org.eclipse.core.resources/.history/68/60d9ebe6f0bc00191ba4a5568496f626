@@ -1,0 +1,9 @@
+package com.calculator;
+
+public class CalcB {
+
+	public CalcB() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

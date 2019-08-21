@@ -1,0 +1,9 @@
+package com.dept;
+
+public class Purchasedept {
+
+	public Purchasedept() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

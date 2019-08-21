@@ -1,0 +1,40 @@
+package com.emp;
+
+import com.dept.Department;
+
+public class Emp {
+String name;
+int id;
+Department sales;
+	public Emp() {
+		// TODO Auto-generated constructor stub
+	}
+	public Emp(String name,int id,Department d) {
+		// TODO Auto-generated constructor stub
+		this.name=name;
+		this.id=id;
+		this.sales=d;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public Department getD() {
+		return sales;
+	}
+	public void setD(Department d) {
+		this.sales= d;
+	}
+	public void getDetails() {
+		System.out.println(id+" "+name);
+		//sales.deptName();
+	}
+}

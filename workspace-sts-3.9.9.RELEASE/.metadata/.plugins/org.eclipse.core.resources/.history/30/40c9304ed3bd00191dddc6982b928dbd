@@ -1,0 +1,9 @@
+package com.sj.testcases;
+
+public class LocalTestcase {
+
+	public LocalTestcase() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,30 @@
+package com.sj.I18N;
+
+import java.util.Locale;
+import java.util.ResourceBundle;
+import java.util.*;
+public class International {
+
+	/*
+	 * public International() { // TODO Auto-generated constructor stub }
+	 */
+	 public static void main(String[] args) {
+		/*
+		 * String language = "hi"; String country = "IU"; if (args.length == 2) {
+		 * language = args[0]; country = args[1]; }
+		 */
+	        try {
+	        Locale locale = new Locale("en", "US");
+	        System.out.println("locale is fine");
+	        System.out.println(Locale.US); 
+	        System.out.println(locale); 
+	      ResourceBundle messages = ResourceBundle.getBundle("messages",locale);
+	       System.out.println("ResourceBundle is fine");
+	        System.out.print(messages.getString("welcomemessage") + " ");
+	       // System.out.println(messages.getString("world"));
+	        }
+	        catch(Exception e) {
+	        	System.out.println(e);
+	        }
+	    }
+}

@@ -1,0 +1,9 @@
+package com.sj.currency;
+
+public class dollarstoRupees {
+
+	public dollarstoRupees() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

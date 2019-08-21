@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Department"/>
+<aop-project name="LifecycleAssignment"/>
+<aop-project name="Currencyconverter"/>
+<aop-project name="Springmvc"/>
+<aop-project name="calculator"/>
+<aop-project name="HelloworldDispatcher"/>
+<aop-project name="Helloworld"/>
+<aop-project name="internationlisation"/>
+<aop-project name="Carproject"/>
+</aop-reference-model>

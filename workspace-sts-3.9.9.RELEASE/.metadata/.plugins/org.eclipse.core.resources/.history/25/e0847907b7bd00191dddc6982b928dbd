@@ -1,0 +1,14 @@
+package com.sj.testcases;
+
+public class Testcases1 {
+
+	public Testcases1() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

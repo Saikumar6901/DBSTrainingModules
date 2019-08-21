@@ -1,0 +1,22 @@
+package com.testpackage;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
+
+import com.helloworld.Helloworld;
+
+public class TestHelloworld {
+
+	public TestHelloworld() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BeanFactory bf=new XmlBeanFactory(new ClassPathResource("hellobean.xml"));
+		Helloworld hw = (Helloworld)bf.getBean("bean1");
+		 hw.sayHello();
+	}
+
+}

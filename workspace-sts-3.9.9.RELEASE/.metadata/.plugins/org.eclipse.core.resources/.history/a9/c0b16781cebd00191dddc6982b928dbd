@@ -1,0 +1,3 @@
+Locale = en, key = welcomemessage, value = Disque dur
+Locale = en_GB, key = welcomemessage, value = Platte
+Locale = bn_IN, key = welcomemessage, value = disk

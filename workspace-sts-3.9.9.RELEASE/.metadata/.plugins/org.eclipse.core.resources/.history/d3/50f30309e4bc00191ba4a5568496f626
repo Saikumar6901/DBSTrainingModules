@@ -1,0 +1,15 @@
+package com.testpackage;
+
+public class TestHelloworld {
+ Helloworld hw;
+	public TestHelloworld() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BeanFactory bf=new XMLBeanFactory(new ClassPathContext("hellobean.xml"));
+
+	}
+
+}

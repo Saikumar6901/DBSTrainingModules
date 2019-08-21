@@ -1,0 +1,55 @@
+package com.sj.currency;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+
+public class Visitor {
+	@Value("Saikumar")
+	String name;
+	@Value("100")
+	double amount;
+	@Autowired
+	@Qualifier("currency2")
+	CurrencyConverter currency;
+	public Visitor() {
+		// TODO Auto-generated constructor stub
+	}
+	public Visitor(String name,double amount,CurrencyConverter currency) {
+		super();
+		this.name = name;
+		this.currency=currency;
+		this.amount=amount;
+	}
+public double getAmount() {
+	return amount;
+}
+public void setAmount(double amount) {
+	this.amount = amount;
+}
+
+	public CurrencyConverter getCurrency() {
+	return currency;
+}
+public void setCurrency(CurrencyConverter currency) {
+	this.currency = currency;
+}
+
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String toString() {
+		return name; 
+	}
+	public void getDetails() {
+		System.out.println(name);
+		System.out.println(currency.convertCurrency(amount));
+	}
+	public String toString() {
+	    double curr = currency.convertCurrency(amount);
+	    return "Name: "+name+"\n amount: "+curr;
+	}
+}

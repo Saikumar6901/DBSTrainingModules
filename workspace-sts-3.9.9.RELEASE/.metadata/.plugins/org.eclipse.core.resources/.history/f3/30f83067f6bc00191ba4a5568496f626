@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+	<bean id="calca" class="com.calculator.CalcA">
+		<constructor-arg value="12"></constructor-arg>
+		<constructor-arg value="14"></constructor-arg>
+	</bean>
+	<bean id="calcb" class="com.calculator.CalcB">
+		<constructor-arg value="45"></constructor-arg>
+		<constructor-arg value="34"></constructor-arg>
+	</bean>
+	<bean id="user" class="com.user.User">
+		<!-- <constructor-arg value="saikumar"></constructor-arg>
+		<constructor-arg ref="calcb"></constructor-arg> -->
+		<property name="name" value="bhargav"></property>
+		<property name="cal"  ref="calca"></property>
+	</bean>
+</beans>
