@@ -1,0 +1,11 @@
+INDEX VERSION 1.4+C:\Users\Abridge Solutions\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2832777048.index
+1411149114.index
+2435913044.index
+3231087582.index
+877833544.index
+1951433842.index
+1419226632.index
+4090337682.index
+1262334709.index
+1857527008.index

@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+ import="com.bean.book.Book" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<% Book b = (Book)request.getAttribute("book"); 
+out.println("hi");
+out.println(b);%>
+</body>
+</html>

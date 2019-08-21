@@ -1,0 +1,8 @@
+127.0.0.1 - - [14/Aug/2019:10:32:43 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [14/Aug/2019:10:32:45 +0530] "GET /Bookmanagement/index.html HTTP/1.1" 200 587
+0:0:0:0:0:0:0:1 - - [14/Aug/2019:10:32:49 +0530] "GET /Bookmanagement/book.jsp?bookdetails=update HTTP/1.1" 200 654
+0:0:0:0:0:0:0:1 - - [14/Aug/2019:10:32:54 +0530] "GET /Bookmanagement/updatedetails.jsp?bookid=2 HTTP/1.1" 200 1068
+0:0:0:0:0:0:0:1 - - [14/Aug/2019:10:33:02 +0530] "GET /Bookmanagement/Bookdp?bookid=2&title=++Java++&author=++Tapadia&price=200.00&bookdetails=update HTTP/1.1" 200 29
+0:0:0:0:0:0:0:1 - - [14/Aug/2019:10:33:07 +0530] "GET /Bookmanagement/book.jsp?bookdetails=viewall HTTP/1.1" 200 275
+0:0:0:0:0:0:0:1 - - [14/Aug/2019:10:33:33 +0530] "GET /Bookmanagement/book.jsp?bookdetails=update HTTP/1.1" 200 654
+0:0:0:0:0:0:0:1 - - [14/Aug/2019:10:33:38 +0530] "GET /Bookmanagement/updatedetails.jsp?bookid=2 HTTP/1.1" 200 1071

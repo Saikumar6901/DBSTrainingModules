@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+.body { text-align: center; }
+.updateform{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 100px;
+  background-color:#7ec0ee;
+  display: inline-block;
+}
+.subbutton{
+
+  margin:auto;
+  display:block;
+}
+</style>
+</head>
+<body>
+<form action="updatedetails.jsp" class="updateform">
+book id: <input type="text" name="bookid"><br></br>
+ <input type="submit" class="subbutton" value="getdetails">
+</form>
+</body>
+</html>

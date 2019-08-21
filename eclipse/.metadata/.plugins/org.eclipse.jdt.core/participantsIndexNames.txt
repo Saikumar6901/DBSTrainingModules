@@ -1,0 +1,13 @@
+INDEX VERSION 1.131
+C:\Users\Abridge Solutions\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\528549465.index
+\Bookmanagement\src
+C:\Users\Abridge Solutions\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4201387785.index
+\servletlifecycle\src
+C:\Users\Abridge Solutions\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3793469574.index
+\Bookmanagement\src
+C:\Users\Abridge Solutions\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2042253387.index
+\Bookmanagement\src
+C:\Users\Abridge Solutions\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1791350360.index
+\WebContent\src
+C:\Users\Abridge Solutions\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\403693492.index
+\Authenticationbeans\src

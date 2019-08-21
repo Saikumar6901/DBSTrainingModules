@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+  import="com.bean.book.Book,com.dao.DAOLayer"  pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<% int x=Integer.parseInt(request.getParameter("bookid"));
+DAOLayer dao=new DAOLayer(); %>
+<form action="../Servletcontroller">
+ book id: <input type="number" name="bookid"  value=<% out.println(x); %> required><br></br>
+ <% Book b= new DAOLayer().viewData(x); %>
+ title: <input type="text" name="title" required><br></br>
+ author: <input type="text" name="author" required><br></br>
+ price: <input type="number" name="price" required><br></br>
+ <input type="hidden" name="bookdetails" value="update">
+ <input type="submit" class="subbutton" value="submit"><br>
+ </form>
+</body>
+</html>

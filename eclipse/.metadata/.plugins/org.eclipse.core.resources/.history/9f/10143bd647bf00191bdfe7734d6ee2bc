@@ -1,0 +1,18 @@
+package com.dao;
+
+import java.sql.Connection;
+
+import com.db.DBConnector;
+
+public class DAOLayer {
+Connection conn=null;
+	public DAOLayer() {
+		// TODO Auto-generated constructor stub
+	}
+	public String insertData() {
+		DBConnector db=new DBConnector();
+		conn=db.getConnection();
+		return "success";
+	}
+	
+}

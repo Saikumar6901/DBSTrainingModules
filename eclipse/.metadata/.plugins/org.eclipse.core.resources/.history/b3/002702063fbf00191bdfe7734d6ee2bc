@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+   import="java.util.*" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="rates">
+<input type="radio" name="bookdetails" id="b1" value="add" onClick="document.location.href='*/WebContent/WEB-INF/jsps/add.jsp'">Add a book<br>
+<input type="radio" name="bookdetails" id="b2" value="view" onClick="document.location.href='index.html'">View a book<br>
+<input type="radio" name="bookdetails" id="b3" value="viewall" onClick="document.location.href='index.html'">View all books<br>
+<input type="radio" name="bookdetails" id="b4" value="delete">Delete a book<br>
+<input type="radio" name="bookdetails" id="b5" value="update">Update a book<br>
+</div>
+</form>
+</body>
+</html>

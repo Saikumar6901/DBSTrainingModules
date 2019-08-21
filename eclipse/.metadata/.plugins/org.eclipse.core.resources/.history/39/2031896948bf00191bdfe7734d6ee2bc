@@ -1,0 +1,43 @@
+package com.bean.book;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class Beanbook {
+int bookid;
+String title,author,s;
+float price;
+public String getS() {
+	return s;
+}
+public void setS(String s) {
+	this.s=s;
+}
+public int getBookid() {
+	return bookid;
+}
+public void setBookid(int bookid) {
+	this.bookid = bookid;
+}
+public String getTitle() {
+	return title;
+}
+public void setTitle(String title) {
+	this.title = title;
+}
+public String getAuthor() {
+	return author;
+}
+public void setAuthor(String author) {
+	this.author = author;
+}
+public float getPrice() {
+	return price;
+}
+public void setPrice(float price) {
+	this.price = price;
+}
+
+}

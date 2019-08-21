@@ -1,0 +1,12 @@
+package com.dao;
+
+public class DAOLayer {
+
+	public DAOLayer() {
+		// TODO Auto-generated constructor stub
+	}
+	public String insertData() {
+		return "success";
+	}
+	
+}

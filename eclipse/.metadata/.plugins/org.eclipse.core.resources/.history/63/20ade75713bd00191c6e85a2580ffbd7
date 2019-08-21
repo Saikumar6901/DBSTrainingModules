@@ -1,0 +1,84 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    import="java.sql.*" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #7ec0ee;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.subbutton{
+  margin:auto;
+  display:block;
+  background-color: #ff0000;
+}
+</style>
+</head>
+<body>
+<form action="Bookdp">
+<table>
+  <tr>
+    <th>Book-id</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Price</th>
+  </tr>
+<td><input type="text" name="bookid" value="
+<% out.println(request.getParameter("bookid")); %>
+"></td>
+<%
+
+String s="update";
+Connection conn = null;
+Statement stmt = null;
+int c=0;
+try{
+Class.forName("org.mariadb.jdbc.Driver");
+conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/sai", "root", "password");
+   System.out.println("Connected database successfully...");
+   //STEP 4: Execute a query
+   System.out.println("selecting data from table in given database...");
+ stmt = conn.createStatement();
+  int bookid=Integer.parseInt(request.getParameter("bookid"));
+	String sql="select * from book where bookid="+bookid;
+	ResultSet rs = stmt.executeQuery(sql);
+	while(rs.next()) {
+		c++;
+
+%>
+<td><input type="text" name="title" value="
+ <% out.print(rs.getString(2)); %>
+ "></td>
+ <td><input type="text" name="author" value="
+ <%out.print(rs.getString(3));%>"></td>
+ <td><input type="text" name="price" value="<%out.print(rs.getString(4));%>"></td>
+ <%
+	}
+	if(c==0) 
+		out.println("please check the bookid "+bookid);
+}
+catch(Exception e){
+	
+}
+%>
+  </table><br></br>
+ <input type="hidden" name="bookdetails" value="<%=s%>">
+<input type="submit" class="subbutton" value="update record">
+</form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+   import="java.util.*" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%! String str=""; %>
+<form action=str>
+<div id="rates">
+<input type="radio" name="bookdetails" id="b1" value="add" checked="checked">Add a book<br>
+<input type="radio" name="bookdetails" id="b2" value="view">View a book<br>
+<input type="radio" name="bookdetails" id="b3" value="viewall">View all books<br>
+<input type="radio" name="bookdetails" id="b4" value="delete">Delete a book<br>
+<input type="radio" name="bookdetails" id="b5" value="update">Update a book<br>
+</div>
+<script>
+var s="";
+var strm=document.querySelector('input[name="bookdetails"]:checked').value;
+if(document.getElementById("b1").checked){
+	s=document.getElementById("b1").value;
+} else if(document.getElementById("b2").checked){
+	s=document.getElementById("b2").value;
+} else if(document.getElementById("b3").checked){
+	s=document.getElementById("b3").value;
+} else if(document.getElementById("b4").checked){
+	s=document.getElementById("b4").value;
+} else if(document.getElementById("b5").checked){
+	s=document.getElementById("b5").value;
+} 
+console.log(s);
+console.log(strm);
+str=s;
+</script>
+<% System.out.println(str); %>
+<span id="result"></span>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>

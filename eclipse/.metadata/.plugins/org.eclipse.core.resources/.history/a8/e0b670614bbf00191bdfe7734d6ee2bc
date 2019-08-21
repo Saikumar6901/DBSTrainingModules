@@ -1,0 +1,127 @@
+package com.servletcontroller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.ResultSet;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.bean.book.Book;
+import com.dao.DAOLayer;
+
+/**
+ * Servlet implementation class Servletcontroller
+ */
+@WebServlet("/Servletcontroller")
+public class Servletcontroller extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Servletcontroller() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	    String s=request.getParameter("bookdetails");
+	    if(s==null) {
+	    	s="viewall";
+	    }
+	    PrintWriter out=response.getWriter();
+	    out.println(s);
+		DAOLayer dao=new DAOLayer();
+		
+        if(s.equals("add")) {
+      	  int bookid=Integer.parseInt(request.getParameter("bookid"));
+  		  String title=request.getParameter("title");
+  		  String author=request.getParameter("author");
+  		  int price=Integer.parseInt(request.getParameter("price"));
+      	  Book b = new Book(bookid,title,author,price);
+      	  dao.insertData(b);
+      }
+      if(s.equals("update")) {
+      	  int bookid=Integer.parseInt(request.getParameter("bookid"));
+  		  String title=request.getParameter("title");
+  		  String author=request.getParameter("author");
+  		  int price=Integer.parseInt(request.getParameter("price"));
+  		  Book b = new Book(bookid,title,author,price);
+      	  dao.updateData(b);
+      }
+      if(s.equals("delete")) {
+      	  int bookid=Integer.parseInt(request.getParameter("bookid"));
+      	 dao.deleteData(bookid);
+      }
+      if(s.equals("view")) {  
+       	out.println("<table style=\"border=\" 1px solid black; \"  \"> <tr>" + 
+      			"    <th>Book-id</th>" + 
+      			"    <th>Title</th>" + 
+      			"    <th>Author	</th>" + 
+      			"    <th>Price	</th>" + 
+      			"  </tr>");
+      	int bookid=Integer.parseInt(request.getParameter("bookid"));
+      	System.out.println("select * from book where bookid="+bookid);
+      	String sql="select * from book where bookid="+bookid;
+      	System.out.println(sql);
+      	ResultSet rs = stmt.executeQuery(sql);
+      	
+      	while(rs.next()) {
+      		c++;
+      		out.print("<tr>"
+      				+ "<td>"+rs.getString(1)+"</td>");
+      		out.print("<td>"+rs.getString(2)+"</td>");
+      		out.print("<td>"+rs.getString(3)+"</td>");
+      		out.print("<td>"+rs.getString(4)+"</td>"
+      				+ "</tr>");
+      	}
+      	out.println("</table>");
+      	if(c==0) 
+      		out.println("please check the bookid "+bookid);
+      
+      }
+      if(s.equals("viewall")) {
+       	out.println("<table style=\"border=\" 1px solid black; \"  \"> <tr>" + 
+      			"    <th>Book-id</th>" + 
+      			"    <th>Title</th>" + 
+      			"    <th>Author	</th>" + 
+      			"    <th>Price	</th>" + 
+      			"  </tr>");
+      	String sql="select * from book";
+      	System.out.println(sql);
+      	ResultSet rs = stmt.executeQuery(sql);
+
+      	while(rs.next()) {
+      		c++;
+      		out.print("<tr>"
+      				+ "<td>"+rs.getString(1)+"</td>");
+      		out.print("<td>"+rs.getString(2)+"</td>");
+      		out.print("<td>"+rs.getString(3)+"</td>");
+      		out.print("<td>"+rs.getString(4)+"</td>"
+      				+ "</tr>");
+      	}
+      	out.println("</table>");
+      	if(c==0) 
+      		out.println("No records present");
+      }
+		out.println(dao.insertData());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

@@ -1,0 +1,81 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body { text-align: center; 
+background-color:#90ee90;}
+.updateform{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 80px;
+  background-color:#7ec0ee;
+  display: inline-block;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #7ec0ee;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.subbutton,.Home{
+  margin:auto;
+  display:block;
+  text-align:center;
+}
+</style>
+</head>
+<body>
+<form action="Bookdp" class="updateform">
+ <%
+ String s=request.getParameter("bookdetails");
+ if(s.equals("add")){	 
+ %>
+ book id: <input type="number" name="bookid"><br></br>
+ title: <input type="text" name="title"><br></br>
+ author: <input type="text" name="author"><br></br>
+ price: <input type="text" name="price"><br></br>
+ <%
+ }
+ else if(s.equals("view")){
+%>
+book id: <input type="number" name="bookid"><br></br>
+<%
+}
+else if(s.equals("delete")){
+%>	 
+book id: <input type="number" name="bookid"><br></br>
+ <%
+}
+else if(s.equals("update")){
+	RequestDispatcher rd=request.getRequestDispatcher("updatefile.jsp");
+	rd.forward(request,response);
+ %>
+ <%-- <%@ forward file="updatefile.jsp" %> --%>
+ <%
+}
+else{
+	//out.println("hi");
+	RequestDispatcher rd=request.getRequestDispatcher("Bookdp");
+	rd.forward(request,response);
+} 
+ %> 
+ <input type="hidden" name="bookdetails" value="<%=s%>">
+ <input type="submit" class="subbutton" value="submit"><br>
+<a href="index.html" class="Home">Home</a>
+</form>
+</body>
+</html>

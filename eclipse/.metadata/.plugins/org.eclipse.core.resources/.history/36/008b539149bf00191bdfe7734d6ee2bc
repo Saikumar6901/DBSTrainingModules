@@ -1,0 +1,49 @@
+package com.dao;
+
+import java.sql.*;
+
+import com.bean.book.Book;
+import com.db.DBConnector;
+
+public class DAOLayer {
+Connection conn=null;
+Statement stmt = null;
+	public DAOLayer() {
+		// TODO Auto-generated constructor stub
+	}
+	public String insertData(Book b) {
+		DBConnector db=new DBConnector();
+		conn=db.getConnection();
+		 try {
+			stmt = conn.createStatement();
+      	String sql="insert into book values("+b.bookid+",'"+b.title+"','"+b.author+"',"+b.price+")";
+      	int x=stmt.executeUpdate(sql);
+      	if(x>0)
+      		return "Record added successfully";
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	   		return "bookid "+b.bookid+" already exists" ;
+	}
+	public String updateData() {
+		DBConnector db=new DBConnector();
+		conn=db.getConnection();
+		return "success";
+	}
+	public String deleteData() {
+		DBConnector db=new DBConnector();
+		conn=db.getConnection();
+		return "success";
+	}
+	public String viewData() {
+		DBConnector db=new DBConnector();
+		conn=db.getConnection();
+		return "success";
+	}
+	public String viewAllData() {
+		DBConnector db=new DBConnector();
+		conn=db.getConnection();
+		return "success";
+	}
+}
